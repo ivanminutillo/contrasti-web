@@ -1,0 +1,139 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<header 
+  x-data="{ open: false }"
+  id="header"
+  class="fixed top-0 left-0  right-0 z-50">
+  
+  <nav class="max-w-screen-lg mx-4 2xl:max-w-screen-xl lg:mx-auto" aria-label="Top">
+    <div class="w-full py-6 flex items-center justify-between">
+      <div class="flex items-center flex-1">
+        <a class="flex-1 logo_white" href="#">
+          <span class="sr-only">Contrasti</span>
+          <img class=" h-8 w-auto mx-auto lg:ml-0" src="/images/logo.png" alt="">
+        </a>
+
+
+        
+        <div class="hidden ml-10 space-x-8 lg:flex items-center">
+          <a href="#ristorante" 
+            class="text-sm header-big font-bold text-base-100 uppercase link-hover link"> Ristorante </a>
+
+          <a href="#menu"
+            class="text-sm header-big font-bold text-base-100 uppercase link-hover link"> Menu </a>
+
+          <a href="#contatti" 
+            class="text-sm header-big font-bold text-base-100 uppercase link-hover link"> Contatti </a>
+          
+            <a href="https:/instagram.com/contrastibottega" target="blank" class="text-white header-big  border-white btn btn-outline btn-sm normal-case px-1">
+            <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span>Seguici su instagram</span>
+          </a>
+          
+          </div>
+          <button type="button" class=" text-white header-big lg:hidden" aria-controls="mobile-menu" @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()">
+            <span class="sr-only">Open main menu</span>
+            <svg
+               x-description="Icon when menu is closed.
+      
+                Heroicon name: outline/menu" x-state:on="Menu open" x-state:off="Menu closed" class="block w-9 h-9" :class="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                      <svg x-description="Icon when menu is open.
+      
+                Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class="header-big hidden h-9 w-9" :class="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+      </div>
+    </div>
+    
+    <div  @keydown.window.escape="open = false" x-show="open" class="relative z-10" aria-labelledby="slide-over-title" x-ref="dialog" aria-modal="true">
+      <div x-show="open" x-transition:enter="ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="Background backdrop, show/hide based on slide-over state." class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+      <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+            
+              <div x-show="open" x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" class="pointer-events-auto w-screen max-w-md" x-description="Slide-over panel, show/hide based on slide-over state." @click.away="open = false">
+                <div class="flex h-full flex-col overflow-y-scroll bg-[#C59D5F] py-6 shadow-xl">
+                  <div class="px-4 sm:px-6">
+                    <div class="flex items-start justify-between">
+                      <div class="ml-3 flex h-7 items-center">
+                        <button type="button" class="btn btn-outline btn-circle" @click="open = false">
+                          <span class="sr-only">Close panel</span>
+                          <svg class="h-8 w-8" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative mt-6 flex-1 px-4 sm:px-6">
+                    <!-- Replace with your content -->
+                    <ul class="menu p-4 overflow-y-auto w-full  text-base-content">
+                      <!-- Sidebar content here -->
+                        <a class="logo_white" href="#">
+                          <span class="sr-only">Contrasti</span>
+                          <img src="/images/r.png" class="w-[100px]" />  
+                        </a>
+                      <div class="flex-1">
+              
+                        <li class="font-serif text-3xl font-bold text-white"><a href="#ristorante">Ristorante</a></li>
+                        <li class="font-serif text-3xl font-bold text-white"><a href="#menu">Menu</a></li>
+                        <li class="font-serif text-3xl font-bold text-white"><a href="#contatti">Contatti</a></li>
+                        <li class="font-serif text-3xl font-bold text-white"><a href="https:/instagram.com/contrastibottega" target="blank">Instagram</a></li>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- <header>
+  <nav class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <figure class="flex flex-shrink-0 items-center space-x-1">
+        <img
+          alt="11st starter-kit logo"
+          class="h-8 w-auto"
+          src="/images/11st-logo.svg"
+          height="32"
+          width="32"
+        />
+        <figcaption>Starter-Kit</figcaption>
+      </figure>
+      <ul class="flex space-x-4">
+        {% for item in navigation.items %} {% if item.url == page.url %} {%
+        assign highlight = 'cursor-default' %} {% assign current =
+        'aria-current="page"' %} {% else %} {% assign highlight = 'underline' %}
+        {% assign current = '' %} {% endif %}
+        <li>
+          <a
+            href="{{ item.url }}"
+            class="text-base font-bold {{ highlight }}"
+            {{
+            current
+            }}
+          >
+            {{ item.text }}
+          </a>
+        </li>
+        {% endfor %}
+        <li>
+          <a
+            href="https://github.com/stefanfrede/11st-starter-kit/"
+            class="text-base font-bold underline hover:text-green-900"
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header> -->

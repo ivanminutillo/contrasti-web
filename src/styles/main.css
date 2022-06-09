@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=Playfair+Display:wght@500&family=Tangerine:wght@700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Scotch Display";
+    src: url("../public/fonts/Scotch_Medium.otf");
+  }
+
+
+  .scroll-class {
+      opacity: 1 !important;
+  }
+
+  .header-obscure {
+    background: white;
+  }
+
+  .header-obscure .header-big {
+      @apply text-base-content;
+  }
+
+  .header-obscure .header-big svg {
+    @apply text-base-content;
+}
+
+  .custom-p {
+      opacity: 0;
+      transition: opacity 3s;
+  }
