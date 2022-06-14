@@ -1,7 +1,7 @@
 {% layout "layouts/base.html" %} {% block content %}
 <div 
   data-scroll-section class=" w-full h-screen relative overflow-hidden">
-  <video
+  <!-- <video
     autoplay
     loop
     muted
@@ -12,7 +12,19 @@
       type="video/mp4"
     />
     Your browser does not support the video tag.
-  </video>
+  </video> -->
+
+  <iframe 
+    class="w-full h-full absolute inset-0 object-cover bg-center pointer-events-none"
+    width="auto" 
+    height="auto" 
+    src="https://www.youtube.com/embed/9KBhvqRU7w4?controls=0&autoplay=1&autoplay=1&mute=1&rel=0&showinfo=0" 
+    title="Contrasti Bottega" 
+    frameborder="0" 
+    scrolling="yes"
+    allow="accelerometer; autoplay; loop; scrolling; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-lg  ">
     <img src="/images/r.png" class="w-[200px] mx-auto border-b-8 border-[#C59D5F]" />  
     <div class="font-serif text-center font-bold text-2xl tracking-wider mt-4 text-white ">Bottega gastronomica</div>
@@ -419,19 +431,22 @@
   </div>
 </div>
 
-<footer 
-  data-scroll-section
-  id="footer" 
-  class="my-12">
-  <img class="h-8 mt-8 w-auto mx-auto" src="/images/logo_nero.png" alt="">
-  <img class="mt-0 mx-auto w-[250px]" src="/images/firma.jpeg">
-</footer>
+<div data-scroll-section >
+  <footer 
+    data-scroll
+    id="footer" 
+    class="my-12">
+    <img class="h-8 mt-8 w-auto mx-auto" src="/images/logo_nero.png" alt="">
+    <div class="italic mx-auto text-center mt-4">di</div>
+    <img class="mt-0 mx-auto w-[250px]" src="/images/firma.jpeg">
+  </footer>
+</div>
 
 <div 
   data-scroll-section
-  class="mt-12   max-w-screen-sm text-center pt-3 pb-6 text-sm text-base-content mx-auto">
+  class="my-12  max-w-screen-sm text-center pt-3 pb-6 text-sm text-base-content mx-auto">
   <div class="w-32 h-0.5 bg-[#C59D5F] mb-6 mx-auto"></div>
 
-  <div data-scroll class="text-base-content/70 italic">Sviluppato con 🧠 da <a href="#" class="link not-italic font-bold">karai studio</a></div>
+  <div data-scroll class="text-base-content/70">Sviluppato da <a href="karaistudio.com" class="link not-italic font-bold">karai studio</a></div>
 </div>
 {% endblock %}
