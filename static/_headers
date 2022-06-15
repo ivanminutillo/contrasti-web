@@ -1,5 +1,0 @@
-/*
-  Content-Security-Policy: default-src 'https:'; font-src fonts.gstatic.com; style-src *;
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1
-  X-Content-Type-Options: nosniff
