@@ -1,5 +1,0 @@
-/*
-  Content-Security-Policy: default-src 'self' https://www.youtube.com/; font-src fonts.gstatic.com;style-src 'self' fonts.googleapis.com; child-src https://www.youtube.com/;
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1
-  X-Content-Type-Options: nosniff
