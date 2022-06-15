@@ -7,6 +7,7 @@ module.exports = function (config) {
   config.setLiquidOptions({
     dynamicPartials: true,
   });
+  config.addPassthroughCopy({ static: "/" })
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/images');
