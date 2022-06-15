@@ -1,6 +1,9 @@
 const fs = require('fs');
+const embeds = require("eleventy-plugin-embed-everything");
 
 module.exports = function (config) {
+  config.addPlugin(embeds);
+
   config.setLiquidOptions({
     dynamicPartials: true,
   });
