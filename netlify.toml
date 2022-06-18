@@ -18,7 +18,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src  'self' 'unsafe-eval'  https://rsms.me https://api.netlify.com https://fonts.googleapis.com ; media-src *; frame-src *; font-src *; style-src 'self' https://rsms.me https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
+    Content-Security-Policy = "default-src  'self' 'unsafe-eval'  https://rsms.me https://api.netlify.com https://fonts.googleapis.com ; media-src data:; frame-src *; font-src *; style-src 'self' https://rsms.me https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
