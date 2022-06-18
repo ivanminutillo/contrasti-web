@@ -1,7 +1,7 @@
 {
   "name": "contrasti_bottega",
-  "description": "11ty, powered by Vite with Tailwind CSS and Alpine.js.",
-  "version": "2.0.0",
+  "description": "Bottega gastronomica tra sperimentazione e rock’n’roll.",
+  "version": "1.0.0",
   "engines": {
     "node": "16.x.x",
     "npm": "8.x.x"
@@ -22,15 +22,15 @@
     "vite"
   ],
   "author": {
-    "name": "Stefan Frede",
-    "email": "stefan@frede.dev"
+    "name": "Ivan Minutillo",
+    "email": "ivanminutillo@outlook.it"
   },
   "license": "MIT",
   "private": true,
   "bugs": {
     "url": "https://github.com/stefanfrede/11st-starter-kit/issues"
   },
-  "homepage": "https://11st-starter-kit.netlify.app",
+  "homepage": "contrastibottega.it",
   "scripts": {
     "clean": "rimraf _site",
     "prepare": "npx husky install",
