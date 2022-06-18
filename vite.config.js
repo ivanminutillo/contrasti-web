@@ -27,7 +27,7 @@ export default defineConfig({
       manifest: {
         name: 'Contrasti Bottega',
         short_name: 'Contrasti Bottega',
-        description: 'Bottega gastronomica tra sperimentazione e rock’n’roll.',
+        description: 'Bottega gastronomica tra sperimentazione e rocknroll.',
         scope: '/',
         start_url: '/',
         display: 'standalone',
