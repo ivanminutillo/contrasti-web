@@ -1,2 +1,0 @@
-src/images/*.mp4 filter=lfs diff=lfs merge=lfs -text
-src/images/contrasti.mp4 filter=lfs diff=lfs merge=lfs -text
