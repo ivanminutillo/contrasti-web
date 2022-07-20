@@ -90,7 +90,7 @@
     "@alpinejs/intersect": "^3.10.2",
     "alpinejs": "^3.0.1",
     "core-js": "^3.20.2",
-    "daisyui": "^2.15.2",
+    "daisyui": "^2.19.1",
     "eleventy-plugin-embed-everything": "^1.14.0",
     "locomotive-scroll": "^4.1.4",
     "vite": "^2.7.13"
